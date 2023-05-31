@@ -1,0 +1,18 @@
+En el ejercicio resta.js, 
+    : dado el minuendo 10 y sustraendo 2 el resultado de resta es 8.
+
+En el ejercicio multiplicacion.js,
+    : dado los numeros 2, 17, y 6 el resultado es 204.
+
+En el ejercicio areaRectangulo.js,
+    : dado el ejemplo de base 5 y altura 3 el resultado es 15,
+    : y dado el ejemplo de base 12.5 y altura 5.3 el resultado es 66.25
+
+En el ejercicio conversionGrados.js,
+    : dado el ejemplo de 50 grados Fahrenheit resulta en 10 grados Celsius
+    : dado el ejemplo de 75 grados Fahrenheit resulta en 23.88888888888889 grados Celsius
+
+En el ejercicio promedio3.js,
+    : dado los numeros 5,7,9 el promedio resulta en 7
+    : dado los numeros -2,-3,-8 el promedio resulta en -4.333333333333333
+    : dado los numeros -1.2,5.3,-3.3 el promedio resulta en 0.2666666666666666
