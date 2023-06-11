@@ -17,4 +17,4 @@ let apellido;
 apellido = "Sarmiento";
 let edad;
 edad = 44;
-console.log("Hola, " + nombre + " " + apellido + ". Tienes " + edad + " años.");
+console.log("Hola, %s %s. Tienes %i años.",nombre,apellido,edad);
