@@ -5,6 +5,7 @@
 
 const readlineSync = require('readline-sync');
 let edad = readlineSync.question("Ingrese su edad:");
+edad = Number(edad);
 if(edad >= 18){
     console.log("Eres mayor de edad")
 } else {
