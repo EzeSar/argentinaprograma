@@ -1,15 +1,11 @@
 
 const readlineSync = require('readline-sync');
 
-let jugadaComputadora;
-let jugadas = ["piedra","papel","tijeras"];
-
 function obtenerJugadaComputadora(){
+    let jugadas = ["piedra","papel","tijeras"];
     jugadaComputadora = jugadas[Math.floor(Math.random() * 2.9)];
     return jugadaComputadora;
 }
-
-let jugadaUsuario;
 
 function obtenerJugadaUsuario(){
     do {
@@ -18,12 +14,6 @@ function obtenerJugadaUsuario(){
     } while (jugadaUsuario!=="piedra" && jugadaUsuario!=="papel" && jugadaUsuario!=="tijeras");
     return jugadaUsuario;
 }
-
-let jugadorA = "la computadora";
-let jugadorB = "el usuario";
-let resultado;
-let ganadosA = 0;
-let ganadosB = 0;
 
 function determinarGanador(a,b){
     switch (a+b) {
@@ -81,11 +71,9 @@ function jugada(){
     \n\tEl resultado fue: ${resultado}.`);
 }
 
-let cantidadDeJugadas;
-
 function obtenerCantidadDeJugadas(){
     do {
-        cantidadDeJugadas = readlineSync.question("Elija la cantidad de jugadas (1, 2 o 3): ");
+        cantidadDeJugadas = readlineSync.question("\nElija la cantidad de jugadas (1, 2 o 3): ");
         cantidadDeJugadas = Number(cantidadDeJugadas);
     } while (cantidadDeJugadas!==1 && cantidadDeJugadas!==2 && cantidadDeJugadas!==3);
     return cantidadDeJugadas;
@@ -95,17 +83,27 @@ function main(){
     obtenerCantidadDeJugadas();
     let i = 0;
     do {
-        jugada();
         i++;
+        console.log(`\nJUGADA N°: ${i}`);
+        jugada();
     } while (i<cantidadDeJugadas);
     if (ganadosA>ganadosB){
-        console.log(`\nEl resultado final fue: Ganó ${jugadorA} ${ganadosA} a ${ganadosB}`);
+        console.log(`\nEL RESULTADO FINAL ES: Ganó ${jugadorA} ${ganadosA} a ${ganadosB}`);
     } else if (ganadosB>ganadosA){
-        console.log(`\nEl resultado final fue: Ganó ${jugadorB} ${ganadosB} a ${ganadosA}`);
+        console.log(`\nEL RESULTADO FINAL ES: Ganó ${jugadorB} ${ganadosB} a ${ganadosA}`);
     } else {
-        console.log(`\nEl resultado final fue: Empate ${ganadosA} a ${ganadosB}`);
+        console.log(`\nEL RESULTADO FINAL ES: Empate ${ganadosA} a ${ganadosB}`);
     }
 }
+
+var cantidadDeJugadas;
+var jugadaComputadora;
+var jugadaUsuario;
+var resultado;
+const jugadorA = "la computadora";
+const jugadorB = "el usuario";
+var ganadosA = 0;
+var ganadosB = 0;
 
 main();
 
